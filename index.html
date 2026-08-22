@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HT Banking & Crypto Ecosystem | Huokaing Thara</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="withdrawal.png" type="image/png">
+</head>
+<body>
+
+    <!-- Google Translate Widget Container -->
+    <div id="google_translate_element" style="display: inline-block; margin-left: 30px;"></div>
+    
+    <!-- Main Ecosystem Dashboard -->
+    <div class="deposit-dashboard">
+        
+        <!-- Top Management Header -->
+        <header class="module-header">
+            <div class="title-area">
+                <h2>HTB SYSTEM ECOSYSTEM CORE</h2>
+                <p>Huokaing Thara Banking & Liquidity Monitoring Panel</p>
+            </div>
+            <div class="action-buttons">
+                <button id="refreshDataBtn" class="btn-secondary" onclick="location.reload();">Re-Synchronize</button>
+            </div>
+        </header>
+
+        <!-- Summary Row -->
+        <section class="summary-row">
+            <div class="summary-card gold">
+                <span class="card-label">Total Liquid Capital Balance</span>
+                <h2 id="displayTotalDeposits">$1,152,910,000.00</h2>
+                <div class="progress-bar-container"><div class="progress-bar" style="width: 84.3%;"></div></div>
+            </div>
+        </section>
+
+        <!-- Operational Breakdowns & Audit Vault -->
+        <div class="panel-layout">
+            
+            <!-- Asset Distribution Panel -->
+            <section class="data-panel">
+                <h3>System Asset Classes</h3>
+                <div id="distributionContainer">
+                    <p style="color: #848e9c; font-size: 0.85rem;">Active node pools synchronized successfully across 31 market instruments.</p>
+                </div>
+            </section>
+
+            <!-- Audit Vault Ledger Table -->
+            <section class="data-panel ledger-view">
+                <h3>Recent Institutional Inflows & Executable Queue</h3>
+                <div class="table-responsive">
+                    <table class="deposit-table">
+                        <thead>
+                            <tr>
+                                <th>Reference ID</th>
+                                <th>Account Tier</th>
+                                <th>Routing Type</th>
+                                <th>Amount</th>
+                                <th>Action</th>
+                                <th>Remove</th>
+                            </tr>
+                        </thead>
+                        <tbody id="depositLogBody">
+                            <!-- Executable Row 1 -->
+                            <tr>
+                                <td>REF-90421</td>
+                                <td>Tier-1 Reserve</td>
+                                <td>SWIFT Wire</td>
+                                <td class="item-amount">$50,000.00</td>
+                                <td>
+                                    <button class="btn-execute-remove btn-buy" onclick="WithdrawalModule.withdrawFunds('50000', this)">
+                                        Execute & Clear
+                                    </button>
+                                </td>
+                            </tr>
+                            <!-- Executable Row 2 -->
+                            <tr>
+                                <td>REF-90422</td>
+                                <td>Institutional Prime</td>
+                                <td>SEPA Transfer</td>
+                                <td class="item-amount">$125,000.00</td>
+                                <td>
+                                    <button class="btn-execute-remove btn-buy" onclick="WithdrawalModule.withdrawFunds('125000', this)">
+                                        Execute & Clear
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+        <!-- Withdrawal Module Section -->
+        <section class="data-panel withdrawal-panel">
+            <h3>Manual Funds Withdrawal</h3>
+            <p class="subtitle" style="text-align: left; margin-bottom: 12px;">Enter withdrawal amount to deduct from system liquid capital.</p>
+            <input type="number" id="withdrawInput" class="withdrawal-input" placeholder="Enter amount (USD)..." step="0.01" />
+            <button class="btn-withdraw" onclick="WithdrawalModule.withdrawFunds(document.getElementById('withdrawInput').value, this)">
+                Execute Withdrawal
+            </button>
+        </section>
+    </div>
+
+    <!-- Script Architecture Integration -->
+    <script src="ledger.js"></script>
+    <script src="deposit.js"></script>
+    <script src="deposit_vault.js"></script>
+    <script src="withdrawal.js"></script>
+    <script src="system_deduct.js"></script>
+    <script src="translate.js"></script>
+    <script src="ultra_secure_mode.js"></script>    
+</body>
+</html>
