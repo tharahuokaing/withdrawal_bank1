@@ -6,8 +6,8 @@
 
     // Load initial data from storage or set defaults
     const savedData = JSON.parse(localStorage.getItem('ht_ledger_data')) || [
-        { id: "DEP-LN-9901", tier: "Corporate Wholesale", route: "Bakong Network Sweep", volume: 4,500,000.00, status: "Success" },
-        { id: "DEP-LN-9905", tier: "Corporate Wholesale", route: "Real-time Gross Settlement", volume: 4,500,000.00, status: "Success" }
+        { id: "DEP-LN-9901", tier: "Corporate Wholesale", route: "Bakong Network Sweep", volume: 10,000,000.00, status: "Success" },
+        { id: "DEP-LN-9905", tier: "Corporate Wholesale", route: "Real-time Gross Settlement", volume: 10,000,000.00, status: "Success" }
     ];
 
     const LedgerEngine = {
